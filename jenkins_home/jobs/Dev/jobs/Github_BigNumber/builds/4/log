@@ -1,0 +1,94 @@
+Started by user [8mha:////4JsbqDd/nPE7dnLou7eCj23lALhaXuYtknAnHPuCytNjAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/Dev/Github_BigNumber
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Dev/Github_BigNumber/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/juanonsoftware/BigNumber.git # timeout=10
+Fetching upstream changes from https://github.com/juanonsoftware/BigNumber.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/juanonsoftware/BigNumber.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision f6a7ccc140a49c07b97d0c5199b25aff2af2e252 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f6a7ccc140a49c07b97d0c5199b25aff2af2e252 # timeout=10
+Commit message: "Remove GeneratePackageOnBuild"
+ > git rev-list --no-walk f6a7ccc140a49c07b97d0c5199b25aff2af2e252 # timeout=10
+[Github_BigNumber] $ /bin/sh -xe /tmp/jenkins17288869661687774026.sh
++ dotnet restore
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+[Github_BigNumber] $ /bin/sh -xe /tmp/jenkins16333053677225097217.sh
++ dotnet test -c Debug --no-restore --verbosity normal
+Build started 11/18/2023 03:54:17.
+     1>Project "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber.sln" on node 1 (VSTest target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber.sln" (1) is building "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/BigNumberTests.csproj" (3) on node 2 (VSTest target(s)).
+     3>BuildProject:
+         Build started, please wait...
+     3>Project "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/BigNumberTests.csproj" (3) is building "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/BigNumberTests.csproj" (3:2) on node 2 (default targets).
+   3:2>Project "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/BigNumberTests.csproj" (3:2) is building "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber/BigNumber.csproj" (2:3) on node 1 (default targets).
+     2>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         Copying file from "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber/obj/Debug/netstandard2.0/BigNumber.dll" to "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber/bin/Debug/netstandard2.0/BigNumber.dll".
+         BigNumber -> /var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber/bin/Debug/netstandard2.0/BigNumber.dll
+         Copying file from "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber/obj/Debug/netstandard2.0/BigNumber.pdb" to "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber/bin/Debug/netstandard2.0/BigNumber.pdb".
+     2>Done Building Project "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber/BigNumber.csproj" (default targets).
+     3>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       _CopyOutOfDateSourceItemsToOutputDirectory:
+       Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildRuntimeConfigurationFiles:
+       Skipping target "GenerateBuildRuntimeConfigurationFiles" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         Copying file from "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/obj/Debug/net6.0/BigNumberTests.dll" to "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/bin/Debug/net6.0/BigNumberTests.dll".
+         BigNumberTests -> /var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/bin/Debug/net6.0/BigNumberTests.dll
+         Copying file from "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/obj/Debug/net6.0/BigNumberTests.pdb" to "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/bin/Debug/net6.0/BigNumberTests.pdb".
+     3>Done Building Project "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/BigNumberTests.csproj" (default targets).
+     3>BuildProject:
+         Build completed.
+         
+Test run for /var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/bin/Debug/net6.0/BigNumberTests.dll (.NETCoreApp,Version=v6.0)
+Microsoft (R) Test Execution Command Line Tool Version 17.3.3 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    16, Skipped:     0, Total:    16, Duration: 137 ms - /var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/bin/Debug/net6.0/BigNumberTests.dll (net6.0)
+     3>Done Building Project "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/BigNumberTests.csproj" (VSTest target(s)).
+     1>Done Building Project "/var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber.sln" (VSTest target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:07.44
+[Github_BigNumber] $ /bin/sh -xe /tmp/jenkins10560232472021041358.sh
++ dotnet build --no-restore -c Release
+MSBuild version 17.3.2+561848881 for .NET
+  BigNumber -> /var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumber/bin/Release/netstandard2.0/BigNumber.dll
+  BigNumberTests -> /var/jenkins_home/workspace/Dev/Github_BigNumber/BigNumberTests/bin/Release/net6.0/BigNumberTests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:04.97
+Finished: SUCCESS
