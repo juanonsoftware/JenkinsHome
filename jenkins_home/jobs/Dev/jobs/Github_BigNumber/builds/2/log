@@ -1,0 +1,23 @@
+Started by user [8mha:////4JsbqDd/nPE7dnLou7eCj23lALhaXuYtknAnHPuCytNjAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mAdmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/Dev/Github_BigNumber
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Dev/Github_BigNumber/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/juanonsoftware/BigNumber.git # timeout=10
+Fetching upstream changes from https://github.com/juanonsoftware/BigNumber.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/juanonsoftware/BigNumber.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision f6a7ccc140a49c07b97d0c5199b25aff2af2e252 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f6a7ccc140a49c07b97d0c5199b25aff2af2e252 # timeout=10
+Commit message: "Remove GeneratePackageOnBuild"
+ > git rev-list --no-walk f6a7ccc140a49c07b97d0c5199b25aff2af2e252 # timeout=10
+[Github_BigNumber] $ /bin/sh -xe /tmp/jenkins8642381724068273220.sh
++ dotnet restore
+/tmp/jenkins8642381724068273220.sh: 2: dotnet: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
